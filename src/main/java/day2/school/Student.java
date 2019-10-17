@@ -5,9 +5,21 @@ import lombok.Getter;
 
 @Getter
 public class Student {
-    private String name;
-    private String surname;
-    private String pesel;
+    protected String name;
+    protected String surname;
+    protected String pesel;
+
+    public Student(){
+    };
+
+
+    public Student(String name, String surname, String pesel){
+        this.name=name;
+
+        this.surname=surname;
+        //this.pesel=pesel;
+        setPesel(pesel);
+    }
 
 
     public void setName(String name) {

@@ -5,10 +5,12 @@ public class SchoolStudent extends Student {
 
 
     public String getSchoolName() {
+
         return schoolName;
     }
 
     public void setSchoolName(String schoolName) {
+
         this.schoolName = schoolName;
     }
 }

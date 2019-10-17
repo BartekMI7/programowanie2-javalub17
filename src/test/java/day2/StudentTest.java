@@ -48,46 +48,27 @@ public class StudentTest {
 
     }
 
-
     @Test
-    public void testConstructorSchoolStudent() {
+    public void testConstructor2(){
         //given
-        SchoolStudent givenSchoolStudent = new SchoolStudent();
-
+        Student givenStudent = new Student("Jan","Kowalski","02070803628");
         //when
-        givenSchoolStudent.setSchoolName("Staszic");
-        givenSchoolStudent.setName("Jan");
-        givenSchoolStudent.setSurname("Kowalski");
-        givenSchoolStudent.setPesel("02070803628");
-
         //then
-        assertEquals("Jan", givenSchoolStudent.getName());
-        assertEquals("Kowalski", givenSchoolStudent.getSurname());
-        assertEquals("02070803628", givenSchoolStudent.getPesel());
-        assertEquals("Staszic", givenSchoolStudent.getSchoolName());
-
+        assertEquals("Jan", givenStudent.getName());
+        assertEquals("Kowalski", givenStudent.getSurname());
+        assertEquals("02070803628",givenStudent.getPesel());
     }
 
-    @Test
-    public void testConstructorClassStudent() {
+    @Test (expected = IllegalArgumentException.class)
+    public void TestConstructorWithIncorrectPesel(){
         //given
-        ClassStudent givenClassStudent = new ClassStudent();
-
-        //when
-        givenClassStudent.setSchoolName("Staszic");
-        givenClassStudent.setName("Jan");
-        givenClassStudent.setSurname("Kowalski");
-        givenClassStudent.setPesel("02070803628");
-        givenClassStudent.setClassNr(3);
-
-
-        //then
-        assertEquals("Jan", givenClassStudent.getName());
-        assertEquals("Kowalski", givenClassStudent.getSurname());
-        assertEquals("02070803628", givenClassStudent.getPesel());
-        assertEquals("Staszic", givenClassStudent.getSchoolName());
-        assertEquals(3, givenClassStudent.getClassNr());
+        Student givenStudent = new Student("Jan","Kowalski","02070803626");
     }
+
+
+
+
+
 
 
 }

@@ -16,9 +16,9 @@ public class DogTest {
         //when
         List<FoodKind> foodKinds = dog.foodKind();
         //then
-        assertTrue(dog.foodKind().contains(FoodKind.MIESO));
         assertTrue(dog.foodKind().contains(FoodKind.KARMA));
         assertTrue(dog.foodKind().contains(FoodKind.MLEKO));
+        assertTrue(dog.foodKind().contains(FoodKind.MIESO));
 
 
     }

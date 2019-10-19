@@ -11,7 +11,7 @@ public class Dog implements Pet {
 
     @Override
     public List<FoodKind> foodKind() {
-        return null;
+        return dogFood;
     }
 
     @Override

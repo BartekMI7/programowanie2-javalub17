@@ -68,10 +68,10 @@ public class BibliotekaTest {
 
 
         //then
-        assertEquals("Back in black AC/DC \n" +
+        assertEquals("Back in black 2004 \n" +
                 "Highway AC/DC 3.6\n" +
                 "Thunder AC/DC 3.8\n" +
-                "Random AC/DC 3.8", listedLibrary);
+                "Random AC/DC 3.8\n", listedLibrary);
 
 
     }

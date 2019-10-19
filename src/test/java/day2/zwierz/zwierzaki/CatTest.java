@@ -12,12 +12,11 @@ public class CatTest {
         //given
         Cat cat = new Cat();
 
-
         //when
         List<FoodKind> foodKinds = cat.foodKind();
 
         //then
-        assertTrue(cat.foodKind().contains(FoodKind.ZBOZE));
+        assertTrue(cat.foodKind().contains(FoodKind.MIESO));
         assertTrue(cat.foodKind().contains(FoodKind.MYSZY));
 
     }

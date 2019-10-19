@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Package {
     private Adress adressSender;
-    private int idPackage;
+    private Long idPackage;
     private LocalDate sendingDate;
     private LocalDate deliveryDate;
     private Adress AdressRecever;
     private ParamsPackage paramsPackage;
 
-    public Package(Adress adressSender, int idPackage, LocalDate sendingDate, LocalDate deliveryDate, Adress adressRecever, ParamsPackage paramsPackage) {
+    public Package(Adress adressSender, Long idPackage, LocalDate sendingDate, LocalDate deliveryDate, Adress adressRecever, ParamsPackage paramsPackage) {
         this.adressSender = adressSender;
         this.idPackage = idPackage;
         this.sendingDate = sendingDate;
@@ -23,7 +23,7 @@ public class Package {
         return adressSender;
     }
 
-    public int getIdPackage() {
+    public Long getIdPackage() {
         return idPackage;
     }
 

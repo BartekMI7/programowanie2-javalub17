@@ -1,12 +1,12 @@
 package day3.kurier;
 
-public class Courier {
+public class Courier implements DHLTypes<Courier> {
     private String name;
     private String telephonNumber;
-    private String idCourier;
+    private Long idCourier;
 
 
-    public Courier(String name, String telephonNumber, String idCourier) {
+    public Courier(String name, String telephonNumber, Long idCourier) {
         this.name = name;
         this.telephonNumber = telephonNumber;
         this.idCourier = idCourier;
@@ -20,7 +20,12 @@ public class Courier {
         return telephonNumber;
     }
 
-    public String getIdCourier() {
+    public Long getIdCourier() {
         return idCourier;
+    }
+
+    @Override
+    public boolean compareType(Courier obj) {
+        return idCourier.equals(obj.getIdCourier());
     }
 }

@@ -22,4 +22,20 @@ public class DHLTest {
 
     }
 
+    @Test
+    public void testAddCourier(){
+        //given
+        DHL dhl = new DHL();
+        //Adress couriecAdress = new Adress("zl. Racławickie","Lublin",12,20532);
+        Courier courier1 = new Courier("Jan Kowalski","4561245",1L);
+        Courier courier2 = new Courier("Jan Kowal","4561255",2L);
+        Courier courier3 = new Courier("Jan Kowalczyl","4561232",3L);
+        //when
+        dhl.addCourier(courier1);
+        dhl.addCourier(courier2);
+        dhl.addCourier(courier3);
+        //then
+
+        assertEquals(3,dhl.getCourierList().size());
+    }
 }

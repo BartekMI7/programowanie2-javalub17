@@ -2,15 +2,15 @@ package day3.kurier;
 
 
 
-public class Customer {
+public class Customer implements DHLTypes<Customer> {
     private String firstName;
     private String lastName;
-    private String adress;
+    private Adress adress;
     private String telephonNumber;
     private Long idCustomer;
 
 
-    public Customer(String firstName, String lastName, String adress, String telephonNumber, Long idCustomer) {
+    public Customer(String firstName, String lastName, Adress adress, String telephonNumber, Long idCustomer) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.adress = adress;
@@ -26,7 +26,7 @@ public class Customer {
         return lastName;
     }
 
-    public String getAdress() {
+    public Adress getAdress() {
         return adress;
     }
 
@@ -36,5 +36,10 @@ public class Customer {
 
     public Long getIdCustomer() {
         return idCustomer;
+    }
+
+    @Override
+    public boolean compareType(Customer obj) {
+        return idCustomer.equals(obj.getIdCustomer());
     }
 }

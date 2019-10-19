@@ -3,7 +3,7 @@ package day3.kurier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Warehouse {
+public class Warehouse implements DHLTypes<Warehouse> {
     private final List<Package> LISTPACKAGE = new ArrayList<>();
     private Long idWarehouse;
     private Adress AdressWarehouse;
@@ -34,4 +34,8 @@ public class Warehouse {
     }
 
 
+    @Override
+    public boolean compareType(Warehouse obj) {
+        return idWarehouse.equals(obj.getIdWarehouse());
+    }
 }

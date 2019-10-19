@@ -22,67 +22,79 @@ public class DHL {
     }
 
     public void addWarehouse(Warehouse warehouse) {
-        boolean warehouseExist = warehouseList.stream().filter(a -> a.getIdWarehouse().equals(warehouse.getIdWarehouse()))
-                .findAny().isPresent();
-        if (!warehouseExist) {
-            warehouseList.add(warehouse);
-        }
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.add(warehouseList,warehouse);
+     //   boolean warehouseExist = warehouseList.stream().filter(a -> a.getIdWarehouse().equals(warehouse.getIdWarehouse()))
+      //          .findAny().isPresent();
+       // if (!warehouseExist) {
+        //    warehouseList.add(warehouse);
+       // }
     }
 
+
     public void addCourier(Courier courier) {
-        boolean courierExist = courierList.stream().filter(a -> a.getIdCourier().equals(courier.getIdCourier()))
-                .findAny().isPresent();
-        if (!courierExist) {
-            courierList.add(courier);
-        }
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.add(courierList,courier);
+        //boolean courierExist = courierList.stream().filter(a -> a.getIdCourier().equals(courier.getIdCourier()))
+        //        .findAny().isPresent();
+        //if (!courierExist) {
+        //    courierList.add(courier);
+        //}
 
     }
 
     public void addCustomer(Customer customer) {
-        boolean customerExist = customerList.stream().filter(a -> a.getIdCustomer().equals(customer.getIdCustomer()))
-                .findAny().isPresent();
-        if (!customerExist) {
-            customerList.add(customer);
-        }
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.add(customerList,customer);
+        //boolean customerExist = customerList.stream().filter(a -> a.getIdCustomer().equals(customer.getIdCustomer()))
+        //        .findAny().isPresent();
+        //if (!customerExist) {
+        //    customerList.add(customer);
+        //}
     }
 
     public void removeWarehouse(Warehouse warehouse) {
-        Optional<Warehouse> warehouseExist = warehouseList.stream()
-                .filter(a -> a.getIdWarehouse().equals(warehouse.getIdWarehouse()))
-                .findAny();
-
-        if (!warehouseExist.isPresent()) {
-            throw new IllegalArgumentException("nie znaleziono magazynu");
-        } else {
-            warehouseList.remove(warehouseExist.get());
-        }
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.remove(warehouseList, warehouse);
+        //Optional<Warehouse> warehouseExist = warehouseList.stream()
+         //       .filter(a -> a.getIdWarehouse().equals(warehouse.getIdWarehouse()))
+          //      .findAny();
+//
+  //      if (!warehouseExist.isPresent()) {
+    //        throw new IllegalArgumentException("nie znaleziono magazynu");
+      //  } else {
+        //    warehouseList.remove(warehouseExist.get());
+       // }
     }
 
     public void removeCustomer(Customer customer) {
-        Optional<Customer> customerExist = customerList.stream()
-                .filter(a -> a.getIdCustomer().equals(customer.getIdCustomer()))
-                .findAny();
-        if (!customerExist.isPresent()){
-            throw new IllegalArgumentException("nie znaleziono klienta");
-        }
-        else {
-            customerList.remove(customerExist.get());
-        }
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.remove(customerList,customer);
+        //Optional<Customer> customerExist = customerList.stream()
+         //       .filter(a -> a.getIdCustomer().equals(customer.getIdCustomer()))
+         //       .findAny();
+        //if (!customerExist.isPresent()){
+        //    throw new IllegalArgumentException("nie znaleziono klienta");
+        //}
+        //else {
+        //    customerList.remove(customerExist.get());
+        //}
     }
 
     public void removeCourier(Courier courier) {
-        Optional<Courier>courierExist = courierList.stream()
-                .filter(a->a.getIdCourier().equals(courier.getIdCourier()))
-                .findAny();
-        if (!courierExist.isPresent()){
-            throw new IllegalArgumentException("nie znaleziono kuriera");
-
+        DHLHelper dhlHelper = new DHLHelper();
+        dhlHelper.remove(courierList,courier);
+        //Optional<Courier>courierExist = courierList.stream()
+        //        .filter(a->a.getIdCourier().equals(courier.getIdCourier()))
+        //        .findAny();
+        //if (!courierExist.isPresent()){
+        //    throw new IllegalArgumentException("nie znaleziono kuriera");
+//
+  //      }
+    //    else {
+      //      courierList.remove(courierExist.get());
         }
-        else {
-            courierList.remove(courierExist.get());
-        }
 
-    }
 
 
 }

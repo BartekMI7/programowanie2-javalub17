@@ -1,4 +1,4 @@
-package day3;
+package day3.binary;
 /**
  * Rozważmy wszystkie ciągi binarne o pewnej długości,
  * które składają się tylko z zer i jedynek,

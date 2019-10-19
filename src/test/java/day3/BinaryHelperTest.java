@@ -1,8 +1,8 @@
 package day3;
 
+import day3.binary.BinaryHelper;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;

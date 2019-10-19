@@ -1,4 +1,4 @@
-package day3;
+package day3.binary;
 
 import java.util.Arrays;
 import java.util.Collection;
